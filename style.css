@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+.main-container{
+    height: 100vh;
+    width: 100vw;
+}
+.main-container::before{
+    content: "";
+    position: absolute;
+    background-image:url("background.jpg");
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+.header{
+    width: 100%;
+    height: 5.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9.3rem;
+}
+
+.logo-container{
+    width: 11.4vw;
+    height: 7vh;
+}
+.logo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.right-header{
+    display: flex;
+    gap: 1.4rem;
+}
+label{
+    width: 7.9rem;
+    height: 2rem;
+    padding: 3px 8px;
+    border: 1px solid #454347;
+    border-radius: 6px;
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+}
+label i{
+    color: #fff;
+}
+select{
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#btn{
+    width: 4.5rem;
+    border-radius: 5px;
+    outline: none;
+    background-color: #d42830;
+    border: none;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: #c21820;
+}
+.content{
+    width: 70vw;
+    margin: auto;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    top:25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.content h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.content p{
+    font-size: 1.387rem;
+    line-height: 3rem;
+}
+.mail-box{
+    height: 3.7rem;
+}
+.mail-box input{
+    height: 100%;
+    width: 24rem;
+    background: #2117139c;
+    border: 1.5px solid #676668;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    margin-right:.389rem;
+}
+
+.mail-box input::placeholder{
+    font-weight: 400;
+    color: #cac6ce;
+    }
+.mail-box button{
+    height: 100%;
+    width: 13rem;
+    background-color:#d42830;
+    border-radius: 6px;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+.mail-box button:hover{
+    background-color: #c21820;
+}
+.features{
+    color: #fff;
+    border-top: 8px solid #232323;
+    padding: 19px 70px;
+    
+}
+.row{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.text-colm{
+   flex-basis: 50%;
+   margin-bottom: 20px;
+}
+.text-colm h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.text-colm p{
+    font-size: 1.5rem;
+}
+.img-colm{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-colm img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+hr{
+    width: 100%;
+    height: 8px;
+    background-color: #303030;
+    border: none;
+    margin-bottom: 20px;
+}
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.faq h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+label::after{
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform .5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordian .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s, padding .5s;
+}
+.accordian input[type="radio"]:checked + label + .content{
+    max-height:600px ;
+    padding: 30px 20px;
+    width: 100%;
+}
+.accordian input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .mail-box{
+    margin: 20px 0;
+}
+.faq small{
+    font-size: 20px;
+}
+.footer{
+    padding: 50px 15% 10px;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+} 
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px; margin-bottom: 10px;
+}
